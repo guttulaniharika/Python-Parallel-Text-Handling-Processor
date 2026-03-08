@@ -1,0 +1,6 @@
+Dataset.csv
+output_results.csv
+project.db
+*.csv
+*.db
+__pycache__/

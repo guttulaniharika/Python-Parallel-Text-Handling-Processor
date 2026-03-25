@@ -128,24 +128,24 @@ Dashboard Visualization
    ↓
 Search / Export
 ```
-⚙️ Installation Guide
-🔹 Prerequisites
+## ⚙️ Installation Guide
+**🔹 Prerequisites**
 Ensure the following software is installed on your system:
 
-🐍 Python 3.8 or higher
-💾 SQLite (optional for database viewing)
-Check Python installation:
+* 🐍 Python 3.8 or higher
+* 💾 SQLite (optional for database viewing)
+* Check Python installation:
 
-   python --version
+   * python --version
 
 ---
-⚡ Processing Performance Comparison
+## ⚡ Processing Performance Comparison
 The system evaluates three different processing approaches.
 
-🔹 Single Processing
+ 🔹 Single Processing 
 Processes reviews sequentially using one CPU core.
 
-🔹 Thread Processing
+🔹 Thread Processing 
 Uses multiple threads to process reviews concurrently.
 
 🔹 Multiprocessing
@@ -153,12 +153,12 @@ Uses multiple CPU cores to process reviews in parallel.
 
 The program automatically determines the fastest processing method.
 
-Example result:
+**Example result:**
 
-Single Processing: 7.62 sec
-Thread Processing: 12.00 sec
-Multiprocessing: 1.51 sec
-Fastest Method: Multiprocessing
+ Single Processing: 7.62 sec
+ Thread Processing: 12.00 sec
+ Multiprocessing: 1.51 sec
+ Fastest Method: Multiprocessing
 ---
 
 
@@ -176,14 +176,14 @@ Fastest Method: Multiprocessing
 10. Search & export
 
 ---
-⚡ Parallel Processing Logic
+## ⚡ Parallel Processing Logic
 
-The system uses multiprocessing to speed up text processing.
+ The system uses multiprocessing to speed up text processing.
 
-The dataset is divided into smaller chunks
-Each chunk is assigned to a CPU core
-All chunks are processed simultaneously
-Results are combined into a final output
+ The dataset is divided into smaller chunks
+ Each chunk is assigned to a CPU core
+ All chunks are processed simultaneously
+ Results are combined into a final output.
 💡 Workflow
 Dataset → Split into Chunks → Parallel Processing → Merge Results
 🚀 Benefit
@@ -274,10 +274,8 @@ SQLite (`project.db`)
 | Parallelism   | Multiprocessing |
 
 ---
-🎯 Conclusion
-This project demonstrates how large text datasets can be efficiently processed using chunk-based processing, rule-based sentiment analysis, and parallel computing techniques.
-
-It also highlights the importance of database indexing and performance benchmarking when working with large-scale data processing systems.
+## 🎯 Conclusion
+This project demonstrates how large text datasets can be efficiently processed using chunk-based processing, rule-based sentiment analysis, and parallel computing techniques.It also highlights the importance of database indexing and performance benchmarking when working with large-scale data processing systems.
 ---
 
 ## 👩‍💻 Author

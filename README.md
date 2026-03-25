@@ -153,12 +153,8 @@ Uses multiple CPU cores to process reviews in parallel.
 
 The program automatically determines the fastest processing method.
 
-**Example result:**
 
- Single Processing: 7.62 sec
- Thread Processing: 12.00 sec
- Multiprocessing: 1.51 sec
- Fastest Method: Multiprocessing
+
 ---
 
 
@@ -179,7 +175,6 @@ The program automatically determines the fastest processing method.
 ## ⚡ Parallel Processing Logic
 
  The system uses multiprocessing to speed up text processing.
-
  The dataset is divided into smaller chunks
  Each chunk is assigned to a CPU core
  All chunks are processed simultaneously
@@ -190,6 +185,7 @@ Dataset → Split into Chunks → Parallel Processing → Merge Results
 Faster execution (up to ~5x improvement)
 Efficient CPU utilization
 Suitable for large datasets
+
 ---
 
 ## 📦 Processing Strategy
@@ -274,9 +270,7 @@ SQLite (`project.db`)
 | Parallelism   | Multiprocessing |
 
 ---
-## 🎯 Conclusion
-This project demonstrates how large text datasets can be efficiently processed using chunk-based processing, rule-based sentiment analysis, and parallel computing techniques.It also highlights the importance of database indexing and performance benchmarking when working with large-scale data processing systems.
----
+
 
 ## 👩‍💻 Author
 

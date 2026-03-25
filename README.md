@@ -1,125 +1,101 @@
-
 🚀 Parallel Text Processing & Sentiment Analysis System
 
-A high-performance, scalable Python-based system designed to process large text datasets using parallel processing, chunk-based execution, and rule-based sentiment analysis.
+A high-performance, scalable, multiprocessing-based text processing system built in Python for efficient handling of large datasets using chunk-based execution and rule-based sentiment analysis.
+
+This system is designed for fast batch processing, parallel text computation, real-time analytics, and an interactive Streamlit dashboard — optimized for large-scale data workflows.
 
 ---
 
-📌 Features at a Glance
+⭐ Features at a Glance
 
-Parallel Processing using multiple CPU cores
-Chunk-Based Processing for large datasets
-Rule-Based Sentiment Analysis engine
-Streamlit interactive dashboard
-File Upload support (CSV, TXT, Excel)
-File preview before processing
-Keyword search with matching results
-CSV export functionality
-Email summary using SMTP
-Bar chart and pie chart visualization
-Processing time tracking
-CPU core usage display
-Reset / clear data functionality
-Edge case handling (empty and invalid files)
+⭐ Parallel Processing Engine (Multiprocessing)
+⭐ Chunk-Based Data Processing for Large Datasets
+⭐ Rule-Based Sentiment Analysis Engine
+⭐ Streamlit Interactive Dashboard
+⭐ File Upload (CSV, TXT, Excel) with Preview
+⭐ Keyword Search with Matching Results
+⭐ CSV Export Functionality
+⭐ Email Summary Integration (SMTP)
+⭐ Data Visualization (Bar Chart & Pie Chart)
+⭐ CPU Core Utilization Tracking
+⭐ Processing Time Monitoring
+⭐ Reset & Session Management
+⭐ Robust Edge Case Handling
+⭐ Modular and Extensible Architecture
 
 ---
 
-📂 Project Structure
+📁 Project Folder Structure
 
 PythonParallelTextProcessor/
-
-app.py — Streamlit UI application
-main.py — Backend execution script
-processor.py — Core processing logic
-chunk_manager.py — Chunk creation module
-sentiment_rules.py — Sentiment analysis rules
-db_manager.py — Database operations
-generator.py — Dataset generator
-
-Dataset.csv — Input dataset
-sentiment_dataset_5000.csv — Sample dataset
-output_results.csv — Processed results
-project.db — SQLite database
-
-.streamlit/config.toml — Streamlit configuration
-README.md — Documentation
-LICENSE — MIT License
+│
+├── app.py
+├── main.py
+├── processor.py
+├── chunk_manager.py
+├── sentiment_rules.py
+├── db_manager.py
+├── generator.py
+│
+├── Dataset.csv
+├── sentiment_dataset_5000.csv
+├── output_results.csv
+├── project.db
+│
+├── .streamlit/config.toml
+├── README.md
+└── LICENSE
 
 ---
 
 🧠 Project Overview
 
-This system processes large text datasets efficiently by combining parallel processing and chunk-based techniques. It performs sentiment analysis and provides visualization, search, and export functionalities.
+This system processes large text datasets efficiently by combining parallel execution and chunk-based strategies. It performs sentiment analysis and provides visualization, search, and export functionalities through an intuitive interface.
 
 ---
 
 🏗 System Architecture
 
-User Input
-→ File Upload & Validation
-→ Data Extraction
-→ Chunk Creation
-→ Parallel Processing
-→ Sentiment Analysis
-→ Result Aggregation
-→ Dashboard Visualization
-→ Search / Export / Email Output
+User Input → File Upload & Validation → Data Extraction → Chunk Segmentation → Parallel Processing Engine → Sentiment Analysis → Result Aggregation → Dashboard Visualization → Search / Export / Email Output
 
 ---
 
 🚀 End-to-End Workflow
 
-User uploads file (CSV / TXT / Excel)
-→ System validates file
-→ Displays preview
-→ Extracts text data
-→ Divides data into chunks
-→ Assigns chunks to CPU cores
-→ Processes data in parallel
-→ Calculates sentiment score
-→ Combines results
-→ Displays dashboard metrics
-→ Allows search, download, and email
+User uploads dataset → System validates input → Displays preview → Extracts text → Divides into chunks → Assigns chunks to CPU cores → Processes in parallel → Calculates sentiment → Aggregates results → Displays dashboard → Enables search, export, and email
 
 ---
 
 📦 Chunk Processing
 
-Large datasets are divided into smaller chunks to improve performance and reduce memory usage.
+Large datasets are divided into smaller chunks to improve performance and reduce memory usage
 
-Example:
-
-50,000 records → chunk size 1,000 → 50 chunks
-100,000 records → chunk size 10,000 → 10 chunks
-1,000,000 records → chunk size 10,000 → 100 chunks
+50,000 records → 1,000 per chunk → 50 chunks
+100,000 records → 10,000 per chunk → 10 chunks
+1,000,000 records → 10,000 per chunk → 100 chunks
 
 ---
 
 🚀 Parallel Processing
 
-Implemented using multiprocessing:
+Implemented using multiprocessing
 
 Pool(cpu_count())
 
-Data is divided and assigned to multiple CPU cores
-Each core processes its part simultaneously
-Results are combined after processing
+Data is divided → Assigned to CPU cores → Executed simultaneously → Results combined
 
-Benefit:
-Faster execution and efficient CPU utilization
+This reduces execution time and improves efficiency
 
 ---
 
-🧠 Sentiment Analysis Logic
+🧠 Sentiment Analysis Engine
 
-Rule-based approach using predefined word lists
+Rule-based approach using predefined word patterns
 
 Positive words: good, great, excellent, happy
 Negative words: bad, terrible, worst
 
 Score = Positive Count − Negative Count
-
-Sentiment classification:
 
 Score > 0 → Positive
 Score < 0 → Negative
@@ -127,12 +103,10 @@ Score = 0 → Neutral
 
 ---
 
-📊 Dashboard Output
+📊 Dashboard Analytics
 
 Total records processed
-Positive count
-Negative count
-Neutral count
+Positive, Negative, Neutral counts
 CPU cores used
 Processing time
 
@@ -147,26 +121,23 @@ Pie chart for sentiment distribution
 
 🔍 Search Module
 
-User enters keyword
-System finds matching rows
-Displays sentiment summary and results
+Keyword-based search → Displays matching results → Shows sentiment summary
 
 ---
 
 📧 Email Module
 
-Sends summary to user email
-Includes sentiment counts and processing time
+Sends structured summary including sentiment counts and processing details
 
 ---
 
 📤 Export Module
 
-Download processed results as CSV file
+Download processed dataset as CSV file
 
 ---
 
-⚡ Performance Comparison
+⚡ Performance Benchmark
 
 Single Processing → slow
 Thread Processing → moderate
@@ -174,62 +145,42 @@ Multiprocessing → fastest
 
 Example:
 
-Single: 7.62 sec
-Thread: 12 sec
-Multiprocessing: 1.51 sec
+Single 7.62 sec
+Thread 12 sec
+Multiprocessing 1.51 sec
 
 ---
 
-📊 Sentiment Distribution Example
-
-Positive: 32638
-Negative: 9857
-Neutral: 7505
-
----
-
-💾 Database Integration
+💾 Database Layer
 
 SQLite database (project.db)
 
-Stores:
-id, text, score, sentiment
+Stores: id, text, score, sentiment
 
 ---
 
-📌 Project Milestones
+📌 Milestones
 
-Milestone 1:
-Dataset loading
-Sentiment analysis
-Chunk processing
+Milestone 1 — Data loading, preprocessing, sentiment analysis, chunking
+Milestone 2 — Threading, multiprocessing, performance benchmarking
+Milestone 3 — Streamlit UI, dashboard, search, export
+Milestone 4 — Large dataset optimization, CPU utilization, edge cases
 
-Milestone 2:
-Thread processing
-Multiprocessing
-Performance comparison
+---
 
-Milestone 3:
-Streamlit UI
-Dashboard visualization
-Search and export
+⚠️ Limitations
 
-Milestone 4:
-Large dataset handling
-Parallel optimization
-CPU utilization
-Edge case handling
-
-
+File upload limit ~200MB
+Large files require configuration or cloud storage
 
 ---
 
 🔮 Future Enhancements
 
-Cloud integration (AWS / Google Drive)
-Real-time processing
-Machine learning-based sentiment analysis
-API integration
+Cloud integration (AWS / GCP)
+Real-time streaming processing
+Machine learning-based sentiment models
+API development (FastAPI)
 
 ---
 
@@ -255,4 +206,3 @@ Niharika Devi Guttula
 MIT License
 
 Copyright (c) 2026 Niharika Devi Guttula
-

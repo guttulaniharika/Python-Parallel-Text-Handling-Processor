@@ -1,7 +1,19 @@
 import re
 
-positive_words = ["good","great","excellent","happy"]
-negative_words = ["bad","terrible","worst"]
+positive_words = [
+    "good","great","excellent","amazing","awesome","fantastic","happy","joy","love","like",
+    "wonderful","best","nice","beautiful","brilliant","success","positive","pleasant","perfect",
+    "delightful","superb","outstanding","enjoy","smile","win","valuable","strong","favorable",
+    "impressive","incredible","marvelous","spectacular","terrific","vibrant","cheerful","optimistic",
+    "lucky","satisfied","glad","helpful","kind","friendly","honest","peaceful","excited","graceful"
+]
+negative_words = [
+    "bad","worst","poor","terrible","awful","hate","dislike","sad","angry","pain",
+    "problem","negative","failure","ugly","horrible","disaster","annoying","boring","weak",
+    "damage","loss","cry","fear","stress","dirty","unhappy","depressed","tired","upset",
+    "hurt","nasty","rude","selfish","greedy","frustrated","disappointed","gloomy","miserable",
+    "pathetic","useless","inferior","wrong","difficult","hard","issue","trouble","badly","fault"
+]
 
 def clean_text(text):
     text = text.lower()

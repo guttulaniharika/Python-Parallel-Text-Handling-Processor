@@ -9,7 +9,7 @@ from db_manager import create_table, bulk_insert, query_test, export_to_csv
 
 
 CHUNK_SIZE = 1000
-
+ 
 
 # -------- Review Processing --------
 
